@@ -36,13 +36,15 @@ if wwheat == 'Less than 50%':
 elif wwheat == 'More than 50%':
     ww = .15
 
-levainpct = st.slider("Levain/Starter Percentage? (default is 25%)", 10, 50, 25, 1, format="%d%%")
-st.write(levainpct, '%')
-flours = st.slider("Flour by gram", 200, 1000, 200, 10)
-st.write(flours)
-
 hydrations = st.slider("Target hydration", 30, 120, 50, 1, format="%d%%")
 st.write(hydrations, '%')
+flours = st.slider("Flour by gram", 200, 1000, 200, 10)
+st.write(flours)
+levainpct = st.slider("Levain/Starter Percentage? (default is 25%)", 10, 50, 25, 1, format="%d%%")
+st.write(levainpct, '%')
+
+
+
 
 st.write(bread(flours, hydrations, ww, levainpct))
 
